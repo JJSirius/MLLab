@@ -13,7 +13,7 @@ def gradiente(x):
 x = 3
 
 # Tasa de aprendizaje
-tasa_aprendizaje = 0.1
+tasa_aprendizaje = 0.01
 
 # Preparación de datos para la gráfica
 x_values = np.linspace(-3, 3, 100)
@@ -39,10 +39,13 @@ for i in range(10):
     x = x - tasa_aprendizaje * grad
 
     # Pause and update the plot
-    plt.pause(1)
+    plt.pause(4)
 
     # clear the previous plot
     plt.cla()
+
+    # print current x and cost
+    print(f"x = {x:.4f}, costo = {cost:.4f}")
 
 plt.show()
 
